@@ -1,0 +1,21 @@
+@import '../styles/mediaQueries.scss';
+@import '../styles/spacing.scss';
+
+.Slice {
+  display: flex;
+  align-items: center;
+  margin: $spacing-1;
+
+  @include palm {
+    flex-direction: column;
+  }
+
+  @include lap-up {
+    flex-direction: column;
+  }
+
+  @include lap-wide-up {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

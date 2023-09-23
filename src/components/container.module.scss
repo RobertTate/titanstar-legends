@@ -1,0 +1,29 @@
+@import '../styles/mediaQueries.scss';
+@import '../styles/spacing.scss';
+@import '../styles/fontsizes.scss';
+@import '../styles/palette.scss';
+
+.Container {
+  display: flex;
+}
+
+.TalentPathsContainer {
+  display: flex;
+
+  @include lap-wide-up {
+    flex-direction: column;
+  }
+}
+
+.PointsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  padding: $spacing-1;
+  border: 1px solid $eerie-black; 
+
+  p {
+    font-size: $font-size-medium;
+  }
+}

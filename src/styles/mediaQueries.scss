@@ -1,0 +1,44 @@
+$palm-start: 300px;
+$palm-end: 599px;
+
+$lap-start: 600px;
+$lap-end: 899px;
+
+$lap-wide-start: 900px;
+$lap-wide-end: 1199px;
+
+$desk-start: 1200px;
+$desk-end: 1799px;
+
+$wall-start: 1800px;
+
+
+@mixin palm {
+  @media only screen and (max-width: #{$palm-end}) {
+    @content;
+  }
+}
+
+@mixin lap-up {
+  @media only screen and (min-width: #{$lap-start}) {
+    @content;
+  }
+}
+
+@mixin lap-wide-up {
+  @media only screen and (min-width: #{$lap-wide-start}) {
+    @content;
+  }
+}
+
+@mixin desk-up {
+  @media only screen and (min-width: #{$desk-start}) {
+    @content;
+  }
+}
+
+@mixin wall-up {
+  @media only screen and (min-width: #{$wall-start}) {
+    @content;
+  }
+}

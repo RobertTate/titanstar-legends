@@ -1,0 +1,26 @@
+@import '../styles/palette.scss';
+@import '../styles/spacing.scss';
+@import '../styles/mediaQueries.scss';
+@import '../styles/fontsizes.scss';
+
+.HeaderContainer {
+  display: flex;
+  justify-content: center;
+  background-color: $eerie-black;
+  margin: $spacing-1 $spacing-1 $spacing-3 $spacing-1;
+  padding: $spacing-half 0;
+}
+
+.HeaderText {
+  @include palm {
+    font-size: $font-size-small;
+  }
+
+  @include lap-up {
+    font-size: $font-size-small;
+  }
+
+  @include lap-wide-up {
+    font-size: $font-size-medium;
+  }
+}

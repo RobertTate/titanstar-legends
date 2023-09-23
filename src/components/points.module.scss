@@ -1,0 +1,11 @@
+@import '../styles/spacing.scss';
+@import '../styles/palette.scss';
+
+.Points {
+  margin-bottom: $spacing-half;
+}
+
+.PointsText {
+  color: $lapis-lazuli;
+  font-weight: 300;
+}

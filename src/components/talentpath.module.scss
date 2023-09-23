@@ -1,0 +1,35 @@
+@import '../styles/mediaQueries.scss';
+@import '../styles/spacing.scss';
+@import '../styles/palette.scss';
+@import '../styles/fontsizes.scss';
+
+.TalentPath {
+  display: flex;
+  align-items: center;
+  margin: $spacing-half;
+
+  @include palm {
+    flex-direction: column;
+  }
+
+  @include lap-up {
+    flex-direction: column;
+  }
+
+  @include lap-wide-up {
+    flex-direction: row;
+
+    &:first-child {
+      margin-bottom: $spacing-3;
+    }
+  }
+
+  p {
+    font-weight: 700;
+    color: $timberwolf;
+  }
+}
+
+.TalentPathTitle {
+  font-size: $font-size-xs;
+}
