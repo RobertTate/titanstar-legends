@@ -13,7 +13,11 @@ export default function Rune({ name, path }: RuneNameWithPath) {
     return state[path].find((r) => r.name === name);
   }) as Rune;
   const isSelected = rune.isSelected;
-  const runeState = rune?.isSelected ? "-active" : "-inactive";
+  const runeState = isSelected ? "-active" : "-inactive";
+  const modifiedRuneHolderStyles = [
+    runeStyles.RuneHolder,
+    runeStyles[`RuneHolder${runeState}`],
+  ].join(" ");
   const modifiedRuneStyles = [
     runeStyles.Rune,
     runeStyles[`Rune${runeState}`],
@@ -66,7 +70,7 @@ export default function Rune({ name, path }: RuneNameWithPath) {
 
   return (
     <>
-      <div className={runeStyles.RuneHolder}>
+      <div className={modifiedRuneHolderStyles}>
         <div
           role="button"
           aria-label={`${rune?.name} icon`}

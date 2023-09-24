@@ -8,12 +8,20 @@ $timberwolf: #d0d0d0;
 $indigo-dye: #263e55;
 $lapis-lazuli: #3c5a75;
 $ruddy-blue: #6fa6e0;
+$redwood: #AB4848;
 
 @mixin shadow {
   -webkit-box-shadow: 0px 0px 5px 2px $dim-gray;
   -moz-box-shadow: 0px 0px 5px 2px $dim-gray;
   box-shadow: 0px 0px 5px 2px $dim-gray;
 }
+
+@mixin warning-shadow {
+  -webkit-box-shadow: 0px 0px 5px 2px $redwood;
+  -moz-box-shadow: 0px 0px 5px 2px $redwood;
+  box-shadow: 0px 0px 5px 2px $redwood;
+}
+
 
 @mixin active-border-gradient {
   background: $ruddy-blue;
