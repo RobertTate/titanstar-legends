@@ -1,5 +1,5 @@
-import { initialAppState as stateObj } from "../redux/state";
 import Rune from "./rune";
+import { initialAppState as stateObj } from "../redux/state";
 import talentPathStyles from "./talentpath.module.scss";
 import type { TalentPathName } from "../types";
 

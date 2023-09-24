@@ -1,5 +1,4 @@
 import type { PropsWithChildren } from "react";
-
 import containerStyles from "./container.module.scss";
 
 type ContainerProps = {

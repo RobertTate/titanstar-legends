@@ -1,6 +1,6 @@
-import type { AppState } from "../types";
 import { useSelector } from "react-redux";
 import pointsStyles from "./points.module.scss";
+import type { AppState } from "../types";
 
 export default function Points() {
   const pointsSpent = useSelector((state: AppState) => state.pointsSpent);

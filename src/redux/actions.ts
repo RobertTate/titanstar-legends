@@ -1,5 +1,5 @@
-import type { RuneWithPath } from "../types";
 import APP_CONSTANTS from "./constants";
+import type { RuneWithPath } from "../types";
 
 const AppActions = {
   selectRune(payload: RuneWithPath) {

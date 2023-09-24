@@ -1,7 +1,7 @@
-import type { Reducer } from "@reduxjs/toolkit";
-import { initialAppState } from "./state";
 import APP_CONSTANTS from "./constants";
+import { initialAppState } from "./state";
 import { selectRune, deselectRune } from "./reducerFunctions";
+import type { Reducer } from "@reduxjs/toolkit";
 
 const appReducer: Reducer = (state = initialAppState, action) => {
   switch (action.type) {

@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import runeStyles from "./rune.module.scss";
-import AppActions from "../redux/actions";
 import type { MouseEvent } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import AppActions from "../redux/actions";
+import runeStyles from "./rune.module.scss";
 import type { AppState, RuneNameWithPath, Rune } from "../types";
 
 export default function Rune({ name, path }: RuneNameWithPath) {
