@@ -24,8 +24,14 @@
     }
   }
 
-  &:last-child .RuneBridge {
-    display: none;
+  &:last-child {
+    @include palm {
+      margin-bottom: $spacing-1-half;
+    }
+
+    & .RuneBridge {
+      display: none;
+    }
   }
 }
 
