@@ -22,8 +22,8 @@
   border: 1px solid $eerie-black;
   background-color: black;
   padding: $spacing-1;
-
-  p {
-    font-size: $font-size-medium;
+  
+  @include lap-wide-up {
+    margin-right: $spacing-2;
   }
 }
