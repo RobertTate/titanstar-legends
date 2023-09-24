@@ -27,38 +27,45 @@
   // The Active Rune Style
   &::before {
     display: block;
-    content: '';
     position: relative;
+    right: 3px;
+    bottom: 3px;
     z-index: -1;
+    transition: opacity 0.5s linear, box-shadow 0.5s linear;
+    outline: 1px solid $night;
     width: 56px;
     height: 56px;
-    bottom: 3px;
-    right: 3px;
-    outline: 1px solid $night;
-    opacity: 0;
-    transition: opacity 0.5s, box-shadow 0.75s;
+    content: '';
   }
 
   &-active {
     &::before {
+      opacity: 1;
       @include active-border-gradient;
       @include shadow;
-      opacity: 1;
+    }
+  }
+
+  &-inactive {
+    &::before {
+      opacity: 0;
+      @include active-border-gradient;
+      @include shadow;
     }
   }
 
   // The Inactive Rune Style
   &::after {
     display: block;
-    content: '';
     position: relative;
-    z-index: -2;
-    width: 56px;
-    height: 56px;
-    bottom: 59px;
     right: 3px;
+    bottom: 59px;
+    z-index: -2;
     outline: 1px solid $night;
     @include inactive-border-gradient;
+    width: 56px;
+    height: 56px;
+    content: '';
   }
 }
 
@@ -66,44 +73,44 @@
   display: block;
   position: absolute;
   z-index: -3;
-  transition: background-color 0.75s, border-color 0.75s;
+  transition: background-color 0.5s linear, border-color 0.5s linear;
 
   @include palm {
-    width: $spacing-1;
-    height: $spacing-5;
     top: 50px;
     left: 16px;
-    border-left: 2px solid;
     border-right: 2px solid;
+    border-left: 2px solid;
+    width: $spacing-1;
+    height: $spacing-5;
   }
 
   @include lap-up {
-    width: $spacing-1;
-    height: $spacing-5;
     top: 50px;
     left: 16px;
-    border-left: 2px solid;
     border-right: 2px solid;
+    border-left: 2px solid;
+    width: $spacing-1;
+    height: $spacing-5;
   }
 
   @include lap-wide-up {
+    top: 16px;
+    left: 50px;
+    border-top: 2px solid;
+    border-right: none;
+    border-bottom: 2px solid;
+    border-left: none;
     width: $spacing-5;
     height: $spacing-1;
-    top: 17px;
-    left: 50px;
-    border-left: none;
-    border-right: none;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
   }
 
   &-active {
-    background-color: $eerie-black;
     border-color: $dim-gray;
+    background-color: $eerie-black;
   }
 
   &-inactive {
-    background-color: $night;
     border-color: $jet;
+    background-color: $night;
   }
 }

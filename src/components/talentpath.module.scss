@@ -23,13 +23,10 @@
       margin-bottom: $spacing-3;
     }
   }
-
-  p {
-    font-weight: 700;
-    color: $timberwolf;
-  }
 }
 
 .TalentPathTitle {
+  color: $timberwolf;
   font-size: $font-size-xs;
+  font-weight: 700;
 }
