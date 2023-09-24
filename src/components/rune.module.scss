@@ -93,40 +93,40 @@
 
   @include palm {
     top: 50px;
-    left: 16px;
-    border-right: 2px solid;
-    border-left: 2px solid;
-    width: $spacing-1;
+    left: 17px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    width: 14px;
     height: $spacing-5;
   }
 
   @include lap-up {
     top: 50px;
-    left: 16px;
-    border-right: 2px solid;
-    border-left: 2px solid;
-    width: $spacing-1;
+    left: 17px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    width: 14px;
     height: $spacing-5;
   }
 
   @include lap-wide-up {
-    top: 16px;
+    top: 19px;
     left: 50px;
-    border-top: 2px solid;
+    border-top: 1px solid;
     border-right: none;
-    border-bottom: 2px solid;
+    border-bottom: 1px solid;
     border-left: none;
     width: $spacing-5;
-    height: $spacing-1;
+    height: 14px;
   }
 
   &-active {
     border-color: $dim-gray;
-    background-color: $eerie-black;
+    background-color: $raisin-black;
   }
 
   &-inactive {
-    border-color: $jet;
-    background-color: $night;
+    border-color: $raisin-black;
+    background-color: $eerie-black;
   }
 }
