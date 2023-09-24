@@ -17,6 +17,7 @@
 
 .HeaderText {
   @include palm {
+    padding: 0 $spacing-half;
     font-size: $font-size-small;
   }
 
