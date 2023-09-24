@@ -3,8 +3,16 @@
 @import "../styles/fontsizes.scss";
 
 .Points {
+  transition:
+    text-shadow 0.25s linear,
+    color 0.25s linear;
   margin-bottom: $spacing-half;
   font-size: $font-size-medium;
+
+  &-allPointsUsed {
+    text-shadow: $ruddy-blue 1px 0 20px;
+    color: $columbia-blue;
+  }
 }
 
 .PointsText {
