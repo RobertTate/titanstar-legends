@@ -9,6 +9,10 @@
   margin: $spacing-1 $spacing-1 $spacing-3 $spacing-1;
   background-color: $eerie-black;
   padding: $spacing-half 0;
+
+  @include palm {
+    margin: $spacing-1;
+  }
 }
 
 .HeaderText {
