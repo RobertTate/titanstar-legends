@@ -1,8 +1,7 @@
 import type { AppState, RuneWithPath } from "../../types";
 
 export default function selectRune(state: AppState, payload: RuneWithPath) {
-  const totalPoints = state.totalPoints;
-  const pointsSpent = state.pointsSpent;
+  const { totalPoints, pointsSpent } = state;
 
   if (pointsSpent >= totalPoints) {
     return state;

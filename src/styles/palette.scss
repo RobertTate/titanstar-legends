@@ -5,3 +5,26 @@ $dim-gray: #6A6A6A;
 $timberwolf: #D0D0D0;
 $indigo-dye: #263E55;
 $lapis-lazuli: #3C5A75;
+$ruddy-blue: #6FA6E0;
+
+@mixin shadow {
+  -webkit-box-shadow: 0px 0px 5px 2px $dim-gray;
+  -moz-box-shadow: 0px 0px 5px 2px $dim-gray;
+  box-shadow: 0px 0px 5px 2px $dim-gray;
+}
+
+@mixin active-border-gradient {
+  background: rgb(111, 166, 224);
+  background: -moz-linear-gradient(0deg, rgba(111, 166, 224, 1) 20%, rgba(54, 68, 81, 1) 50%, rgba(111, 166, 224, 1) 50%);
+  background: -webkit-linear-gradient(0deg, rgba(111, 166, 224, 1) 20%, rgba(54, 68, 81, 1) 50%, rgba(111, 166, 224, 1) 50%);
+  background: linear-gradient(0deg, rgba(111, 166, 224, 1) 20%, rgba(54, 68, 81, 1) 50%, rgba(111, 166, 224, 1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6fa6e0", endColorstr="#6fa6e0", GradientType=1);
+}
+
+@mixin inactive-border-gradient {
+  background: rgb(106, 106, 106);
+  background: -moz-linear-gradient(0deg, rgba(106, 106, 106, 1) 20%, rgba(58, 58, 58, 1) 50%, rgba(106, 106, 106, 1) 50%);
+  background: -webkit-linear-gradient(0deg, rgba(106, 106, 106, 1) 20%, rgba(58, 58, 58, 1) 50%, rgba(106, 106, 106, 1) 50%);
+  background: linear-gradient(0deg, rgba(106, 106, 106, 1) 20%, rgba(58, 58, 58, 1) 50%, rgba(106, 106, 106, 1) 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6a6a6a", endColorstr="#6a6a6a", GradientType=1);
+}

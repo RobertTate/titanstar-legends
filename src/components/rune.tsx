@@ -13,6 +13,7 @@ export default function Rune({ name, path }: RuneNameWithPath) {
   const isSelected = rune.isSelected;
   const runeState = rune?.isSelected ? '-active' : '-inactive';
   const modifiedRuneStyles = [runeStyles.Rune, runeStyles[`Rune${runeState}`]].join(' ');
+  const modifiedRuneBridgeStyles = [runeStyles.RuneBridge, runeStyles[`RuneBridge${runeState}`]].join(' '); 
   
   const handleContextMenu = (e: MouseEvent) => {
     e.preventDefault();
@@ -57,15 +58,17 @@ export default function Rune({ name, path }: RuneNameWithPath) {
 
   return (
     <>
-      <div
-        role="button"
-        aria-label={`${rune?.name} icon`}
-        onContextMenu={handleContextMenu}
-        onMouseDown={handleMouseDown}
-        onTouchEnd={handleMobileTouch}
-        className={modifiedRuneStyles}
-        id={`${rune?.name}${runeState}`}
-      >
+      <div className={runeStyles.RuneHolder}>
+        <div
+          role="button"
+          aria-label={`${rune?.name} icon`}
+          onContextMenu={handleContextMenu}
+          onMouseDown={handleMouseDown}
+          onTouchEnd={handleMobileTouch}
+          className={modifiedRuneStyles}
+          id={`${rune?.name}${runeState}`}
+        ></div>
+        <span className={modifiedRuneBridgeStyles}></span>
       </div>
     </>
   )
