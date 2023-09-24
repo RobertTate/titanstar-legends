@@ -5,7 +5,7 @@ export default function selectRune(state: AppState, payload: RuneWithPath) {
 
   if (pointsSpent >= totalPoints) {
     return state;
-  };
+  }
 
   const talentPath = payload.path;
 
@@ -19,9 +19,10 @@ export default function selectRune(state: AppState, payload: RuneWithPath) {
 
   if (isRuneAlreadyActive) {
     return state;
-  };
+  }
 
-  const isFirstRuneNotActive = runeIndex === 0 && updatedTalentPath[runeIndex].isSelected === false;
+  const isFirstRuneNotActive =
+    runeIndex === 0 && updatedTalentPath[runeIndex].isSelected === false;
   const previousRune = updatedTalentPath[runeIndex - 1];
   const isPreviousRuneActive = previousRune && previousRune.isSelected === true;
 
@@ -29,15 +30,15 @@ export default function selectRune(state: AppState, payload: RuneWithPath) {
     //Activate The Rune
     updatedTalentPath[runeIndex] = {
       ...updatedTalentPath[runeIndex],
-      isSelected: true
+      isSelected: true,
     };
 
     return {
       ...state,
       [talentPath]: updatedTalentPath,
-      pointsSpent: pointsSpent + 1
+      pointsSpent: pointsSpent + 1,
     };
-  };
+  }
 
   return state;
-};
+}

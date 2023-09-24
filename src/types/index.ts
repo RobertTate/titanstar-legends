@@ -6,11 +6,11 @@ export type Rune = {
 export type TalentPath = Rune[];
 
 export type TalentPathName = {
-  path: 'talentPath1' | 'talentPath2';
+  path: "talentPath1" | "talentPath2";
 };
 
 export type RuneWithPath = Rune & TalentPathName;
-export type RuneName = Omit<Rune, 'isSelected'>;
+export type RuneName = Omit<Rune, "isSelected">;
 export type RuneNameWithPath = RuneName & TalentPathName;
 
 export type AppState = {

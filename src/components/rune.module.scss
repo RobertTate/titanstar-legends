@@ -1,6 +1,6 @@
-@import '../styles/spacing.scss';
-@import '../styles/mediaQueries.scss';
-@import '../styles/palette.scss';
+@import "../styles/spacing.scss";
+@import "../styles/mediaQueries.scss";
+@import "../styles/palette.scss";
 
 .RuneHolder {
   display: block;
@@ -31,11 +31,13 @@
     right: 3px;
     bottom: 3px;
     z-index: -1;
-    transition: opacity 0.5s linear, box-shadow 0.5s linear;
+    transition:
+      opacity 0.5s linear,
+      box-shadow 0.5s linear;
     outline: 1px solid $night;
     width: 56px;
     height: 56px;
-    content: '';
+    content: "";
   }
 
   &-active {
@@ -65,7 +67,7 @@
     @include inactive-border-gradient;
     width: 56px;
     height: 56px;
-    content: '';
+    content: "";
   }
 }
 
@@ -73,7 +75,9 @@
   display: block;
   position: absolute;
   z-index: -3;
-  transition: background-color 0.5s linear, border-color 0.5s linear;
+  transition:
+    background-color 0.5s linear,
+    border-color 0.5s linear;
 
   @include palm {
     top: 50px;

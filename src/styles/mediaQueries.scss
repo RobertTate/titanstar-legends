@@ -12,7 +12,6 @@ $desk-end: 1799px;
 
 $wall-start: 1800px;
 
-
 @mixin palm {
   @media only screen and (max-width: #{$palm-end}) {
     @content;

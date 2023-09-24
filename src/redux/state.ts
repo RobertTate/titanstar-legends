@@ -5,38 +5,38 @@ export const initialAppState: AppState = {
   pointsSpent: 0,
   talentPath1: [
     {
-      name: 'chevrons',
-      isSelected: false
+      name: "chevrons",
+      isSelected: false,
     },
     {
-      name: 'silverware',
-      isSelected: false
+      name: "silverware",
+      isSelected: false,
     },
     {
-      name: 'cake',
-      isSelected: false
+      name: "cake",
+      isSelected: false,
     },
     {
-      name: 'crown',
-      isSelected: false
-    }
+      name: "crown",
+      isSelected: false,
+    },
   ],
   talentPath2: [
     {
-      name: 'ship',
-      isSelected: false
+      name: "ship",
+      isSelected: false,
     },
     {
-      name: 'snorkle',
-      isSelected: false
+      name: "snorkle",
+      isSelected: false,
     },
     {
-      name: 'lightning',
-      isSelected: false
+      name: "lightning",
+      isSelected: false,
     },
     {
-      name: 'skull',
-      isSelected: false
-    }
-  ]
+      name: "skull",
+      isSelected: false,
+    },
+  ],
 };

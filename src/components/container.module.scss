@@ -1,7 +1,7 @@
-@import '../styles/mediaQueries.scss';
-@import '../styles/spacing.scss';
-@import '../styles/fontsizes.scss';
-@import '../styles/palette.scss';
+@import "../styles/mediaQueries.scss";
+@import "../styles/spacing.scss";
+@import "../styles/fontsizes.scss";
+@import "../styles/palette.scss";
 
 .Container {
   display: flex;
@@ -22,7 +22,7 @@
   border: 1px solid $eerie-black;
   background-color: black;
   padding: $spacing-1;
-  
+
   @include lap-wide-up {
     margin-right: $spacing-2;
   }

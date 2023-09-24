@@ -5,7 +5,7 @@ export default function deselectRune(state: AppState, payload: RuneWithPath) {
 
   if (pointsSpent <= 0) {
     return state;
-  };
+  }
 
   const talentPath = payload.path;
 
@@ -19,21 +19,21 @@ export default function deselectRune(state: AppState, payload: RuneWithPath) {
 
   if (isNextRuneActive) {
     return state;
-  };
+  }
 
   if (updatedTalentPath[runeIndex].isSelected === true) {
     //Deactivate The Rune
     updatedTalentPath[runeIndex] = {
       ...updatedTalentPath[runeIndex],
-      isSelected: false
+      isSelected: false,
     };
 
     return {
       ...state,
       [talentPath]: updatedTalentPath,
-      pointsSpent: pointsSpent - 1
+      pointsSpent: pointsSpent - 1,
     };
   }
 
   return state;
-};
+}

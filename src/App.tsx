@@ -1,8 +1,8 @@
-import Header from './components/header';
-import Slice from './components/slice';
-import Container from './components/container';
-import TalentPath from './components/talentpath';
-import Points from './components/points';
+import Header from "./components/header";
+import Slice from "./components/slice";
+import Container from "./components/container";
+import TalentPath from "./components/talentpath";
+import Points from "./components/points";
 
 function App() {
   return (
@@ -18,9 +18,9 @@ function App() {
             <Points />
           </Container>
         </Slice>
-      </main >
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
