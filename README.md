@@ -1,6 +1,6 @@
 # TitanStar Legends
 
-![TitanStar Legends](./src/assets/TitanStarLegends.jpg)
+![TitanStar Legends](./src/assets/TitanStar.jpg)
 
 Players of TitanStar Legends can spend talent points that they’ve collected on runes within a tree.
 
