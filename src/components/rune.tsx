@@ -9,9 +9,9 @@ export default function Rune({ name, path }: RuneNameWithPath) {
   const [mobileTouchToggler, setMobileTouchToggler] = useState(true);
   const [wasJustTouchedOnMobile, setWasJustTouchedOnMobile] = useState(false);
   const dispatch = useDispatch();
-  const rune = useSelector((state: AppState) =>
-    state[path].find((r) => r.name === name),
-  ) as Rune;
+  const rune = useSelector((state: AppState) => {
+    return state[path].find((r) => r.name === name);
+  }) as Rune;
   const isSelected = rune.isSelected;
   const runeState = rune?.isSelected ? "-active" : "-inactive";
   const modifiedRuneStyles = [
