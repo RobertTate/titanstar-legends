@@ -1,8 +1,11 @@
-# TitanStar Legends - Rune Mastery Loadout Talent Calculator 9000
+# TitanStar Legends
 
 ![TitanStar Legends](./src/assets/TitanStarLegends.jpg)
 
 Players of TitanStar Legends can spend talent points that they’ve collected on runes within a tree.
+
+## Demo
+- https://incandescent-licorice-1eb1fa.netlify.app/
 
 ## Technologies Used
 - React
