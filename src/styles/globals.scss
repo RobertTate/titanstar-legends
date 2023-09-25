@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
 @import "./sprites.scss";
+@import "./spacing.scss";
+@import "./palette.scss";
 
 * {
   font-family: "Open Sans", sans-serif;
@@ -7,12 +9,17 @@
 }
 
 body {
-  background: url("../assets/talent-calc-bg.png") center center repeat;
+  background-color: $night;
+  padding: 0 $spacing-half;
 }
 
 main {
+  position: sticky;
   max-width: 900px;
-  margin: auto;
+  margin: $spacing-1 auto;
+  border: 1px solid $eerie-black;
+  background: url("../assets/talent-calc-bg.png") center center repeat;
+  padding: $spacing-half 0;
 }
 
 h1 {
