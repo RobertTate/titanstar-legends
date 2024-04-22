@@ -3,7 +3,7 @@
 @import "../styles/mediaQueries.scss";
 @import "../styles/fontsizes.scss";
 
-.HeaderContainer {
+.header {
   display: flex;
   justify-content: center;
   margin: 0 $spacing-1 $spacing-3 $spacing-1;
@@ -13,19 +13,19 @@
   @include palm {
     margin: 0 $spacing-1 $spacing-1 $spacing-1;
   }
-}
 
-.HeaderText {
-  @include palm {
-    padding: 0 $spacing-half;
-    font-size: $font-size-small;
-  }
-
-  @include lap-up {
-    font-size: $font-size-small;
-  }
-
-  @include lap-wide-up {
-    font-size: $font-size-medium;
+  &__text {
+    @include palm {
+      padding: 0 $spacing-half;
+      font-size: $font-size-small;
+    }
+  
+    @include lap-up {
+      font-size: $font-size-small;
+    }
+  
+    @include lap-wide-up {
+      font-size: $font-size-medium;
+    }
   }
 }

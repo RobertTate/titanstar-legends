@@ -7,5 +7,5 @@ type SliceProps = {
 };
 
 export default function Slice(props: SliceProps) {
-  return <div className={sliceStyles.Slice}>{props.children}</div>;
+  return <div className={sliceStyles["slice"]}>{props.children}</div>;
 }

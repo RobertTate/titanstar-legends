@@ -3,7 +3,7 @@
 @import "../styles/palette.scss";
 @import "../styles/fontsizes.scss";
 
-.TalentPath {
+.talent-path {
   display: flex;
   align-items: center;
   margin: $spacing-half;
@@ -23,10 +23,10 @@
       margin-bottom: $spacing-3;
     }
   }
-}
 
-.TalentPathTitle {
-  color: $timberwolf;
-  font-size: $font-size-xs;
-  font-weight: 700;
+  &__title {
+    color: $timberwolf;
+    font-size: $font-size-xs;
+    font-weight: 700;
+  }
 }

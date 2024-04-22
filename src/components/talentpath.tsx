@@ -1,12 +1,12 @@
+import { useSelector } from "react-redux";
 import Rune from "./rune";
-import { initialAppState as stateObj } from "../redux/state";
 import talentPathStyles from "./talentpath.module.scss";
-import type { TalentPathName } from "../types";
+import type { AppState, TalentPathName } from "../types";
 
-type TalentPathProps = TalentPathName;
-
-export default function TalentPath({ path }: TalentPathProps) {
-  const talentPath = stateObj[path];
+export default function TalentPath({ path }: TalentPathName) {
+  const talentPath = useSelector((state: AppState) => {
+    return state[path];
+  });
   const talentPathTitle: string = {
     talentPath1: "TALENT PATH 1",
     talentPath2: "TALENT PATH 2",
@@ -14,10 +14,15 @@ export default function TalentPath({ path }: TalentPathProps) {
 
   return (
     <>
-      <div className={talentPathStyles.TalentPath}>
-        <p className={talentPathStyles.TalentPathTitle}>{talentPathTitle}</p>
+      <div className={talentPathStyles["talent-path"]}>
+        <p className={talentPathStyles["talent-path__title"]}>{talentPathTitle}</p>
         {talentPath.map((rune) => {
-          return <Rune key={rune.name} name={rune.name} path={path} />;
+          return <Rune 
+            key={rune.name} 
+            name={rune.name} 
+            isSelected={rune.isSelected} 
+            path={path} 
+          />;
         })}
       </div>
     </>

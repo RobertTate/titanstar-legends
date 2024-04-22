@@ -1,31 +1,18 @@
-import { useState } from "react";
+import { useState, memo } from "react";
 import type { MouseEvent } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import AppActions from "../redux/actions";
 import runeStyles from "./rune.module.scss";
-import type { AppState, RuneNameWithPath, Rune } from "../types";
+import type { RuneWithPath } from "../types";
 
-export default function Rune({ name, path }: RuneNameWithPath) {
+const Rune = ({ name, isSelected, path }: RuneWithPath) => {
   const [mobileTouchToggler, setMobileTouchToggler] = useState(true);
   const [wasJustTouchedOnMobile, setWasJustTouchedOnMobile] = useState(false);
   const dispatch = useDispatch();
-  const rune = useSelector((state: AppState) => {
-    return state[path].find((r) => r.name === name);
-  }) as Rune;
-  const isSelected = rune.isSelected;
-  const runeState = isSelected ? "-active" : "-inactive";
-  const modifiedRuneHolderStyles = [
-    runeStyles.RuneHolder,
-    runeStyles[`RuneHolder${runeState}`],
-  ].join(" ");
-  const modifiedRuneStyles = [
-    runeStyles.Rune,
-    runeStyles[`Rune${runeState}`],
-  ].join(" ");
-  const modifiedRuneBridgeStyles = [
-    runeStyles.RuneBridge,
-    runeStyles[`RuneBridge${runeState}`],
-  ].join(" ");
+  const runeState = isSelected ? "--active" : "--inactive";
+  const runeStyleMods = `rune${runeState}`;
+  const runeIconStyleMods = `rune__icon${runeState}`;
+  const runeBridgeStyleMods = `rune__bridge${runeState}`;
 
   const handleContextMenu = (e: MouseEvent) => {
     e.preventDefault();
@@ -70,18 +57,22 @@ export default function Rune({ name, path }: RuneNameWithPath) {
 
   return (
     <>
-      <div className={modifiedRuneHolderStyles}>
+      <div className={`${runeStyles["rune"]} ${runeStyles[runeStyleMods] ? ` ${runeStyles[runeStyleMods]}` : ""}`}>
         <div
           role="button"
-          aria-label={`${rune?.name} icon`}
+          aria-label={`${name} icon`}
           onContextMenu={handleContextMenu}
           onMouseDown={handleMouseDown}
           onTouchEnd={handleMobileTouch}
-          className={modifiedRuneStyles}
-          id={`${rune?.name}${runeState}`}
+          className={`${runeStyles["rune__icon"]} ${runeStyles[runeIconStyleMods]}`}
+          id={`${name}${runeState}`}
         ></div>
-        <span className={modifiedRuneBridgeStyles}></span>
+        <span className={`${runeStyles["rune__bridge"]} ${runeStyles[runeBridgeStyleMods]}`}></span>
       </div>
     </>
   );
 }
+
+const MemoizedRune = memo(Rune);
+
+export default MemoizedRune;

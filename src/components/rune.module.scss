@@ -2,7 +2,7 @@
 @import "../styles/mediaQueries.scss";
 @import "../styles/palette.scss";
 
-.RuneHolder {
+.rune {
   display: block;
   position: relative;
 
@@ -29,133 +29,133 @@
       margin-bottom: $spacing-1;
     }
 
-    & .RuneBridge {
+    & .rune__bridge {
       display: none;
     }
   }
 
-  & .Rune:hover::after {
+  & .rune__icon:hover::after {
     @include warning-shadow;
   }
 
-  &:nth-child(2) .Rune:hover::after {
+  &:nth-child(2) .rune__icon:hover::after {
     @include shadow;
   }
 
-  &-active ~ & .Rune:hover::after {
+  &--active ~ & .rune__icon:hover::after {
     opacity: 1;
     @include warning-shadow;
   }
 
-  &-active + & .Rune:hover::after {
+  &--active + & .rune__icon:hover::after {
     opacity: 1;
     @include shadow;
   }
-}
 
-.Rune {
-  width: 50px;
-  height: 50px;
-  background-image: url("../assets/talent-icons-sprite.png");
-
-  // The Active Rune Style
-  &::before {
-    display: block;
-    position: relative;
-    right: 3px;
-    bottom: 3px;
-    z-index: -1;
-    transition:
-      opacity 0.5s linear,
-      box-shadow 0.5s linear;
-    outline: 1px solid $night;
-    width: 56px;
-    height: 56px;
-    content: "";
-  }
-
-  &-active {
+  &__icon {
+    width: 50px;
+    height: 50px;
+    background-image: url("../assets/talent-icons-sprite.png");
+  
+    // The Active Rune Style
     &::before {
-      opacity: 1;
-      @include active-border-gradient;
-      @include shadow;
+      display: block;
+      position: relative;
+      right: 3px;
+      bottom: 3px;
+      z-index: -1;
+      transition:
+        opacity 0.5s linear,
+        box-shadow 0.5s linear;
+      outline: 1px solid $night;
+      width: 56px;
+      height: 56px;
+      content: "";
+    }
+  
+    &--active {
+      &::before {
+        opacity: 1;
+        @include active-border-gradient;
+        @include shadow;
+      }
+    }
+  
+    &--inactive {
+      &::before {
+        opacity: 0;
+        @include active-border-gradient;
+        @include shadow;
+      }
+    }
+  
+    // The Inactive Rune Style
+    &::after {
+      display: block;
+      position: relative;
+      right: 3px;
+      bottom: 59px;
+      z-index: -2;
+      transition:
+        opacity 0.3s linear,
+        box-shadow 0.3s linear;
+      outline: 1px solid $night;
+      @include inactive-border-gradient;
+      width: 56px;
+      height: 56px;
+      content: "";
+    }
+  
+    &:hover {
+      cursor: pointer;
     }
   }
 
-  &-inactive {
-    &::before {
-      opacity: 0;
-      @include active-border-gradient;
-      @include shadow;
-    }
-  }
-
-  // The Inactive Rune Style
-  &::after {
+  &__bridge {
     display: block;
-    position: relative;
-    right: 3px;
-    bottom: 59px;
-    z-index: -2;
+    position: absolute;
+    z-index: -3;
     transition:
-      opacity 0.3s linear,
-      box-shadow 0.3s linear;
-    outline: 1px solid $night;
-    @include inactive-border-gradient;
-    width: 56px;
-    height: 56px;
-    content: "";
-  }
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.RuneBridge {
-  display: block;
-  position: absolute;
-  z-index: -3;
-  transition:
-    background-color 0.5s linear,
-    border-color 0.5s linear;
-
-  @include palm {
-    top: 50px;
-    left: 17px;
-    border-right: 1px solid;
-    border-left: 1px solid;
-    width: 14px;
-    height: $spacing-5;
-  }
-
-  @include lap-up {
-    top: 50px;
-    left: 17px;
-    border-right: 1px solid;
-    border-left: 1px solid;
-    width: 14px;
-    height: $spacing-5;
-  }
-
-  @include lap-wide-up {
-    top: 19px;
-    left: 50px;
-    border-top: 1px solid;
-    border-right: none;
-    border-bottom: 1px solid;
-    border-left: none;
-    width: $spacing-5;
-    height: 14px;
-  }
-
-  &-active {
-    border-color: $dim-gray;
-    background-color: $raisin-black;
-  }
-
-  &-inactive {
-    border-color: $raisin-black;
-    background-color: $eerie-black;
+      background-color 0.5s linear,
+      border-color 0.5s linear;
+  
+    @include palm {
+      top: 50px;
+      left: 17px;
+      border-right: 1px solid;
+      border-left: 1px solid;
+      width: 14px;
+      height: $spacing-5;
+    }
+  
+    @include lap-up {
+      top: 50px;
+      left: 17px;
+      border-right: 1px solid;
+      border-left: 1px solid;
+      width: 14px;
+      height: $spacing-5;
+    }
+  
+    @include lap-wide-up {
+      top: 19px;
+      left: 50px;
+      border-top: 1px solid;
+      border-right: none;
+      border-bottom: 1px solid;
+      border-left: none;
+      width: $spacing-5;
+      height: 14px;
+    }
+  
+    &--active {
+      border-color: $dim-gray;
+      background-color: $raisin-black;
+    }
+  
+    &--inactive {
+      border-color: $raisin-black;
+      background-color: $eerie-black;
+    }
   }
 }

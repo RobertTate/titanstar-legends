@@ -2,21 +2,21 @@
 @import "../styles/palette.scss";
 @import "../styles/fontsizes.scss";
 
-.Points {
+.points {
   transition:
     text-shadow 0.25s linear,
     color 0.25s linear;
   margin-bottom: $spacing-half;
   font-size: $font-size-medium;
 
-  &-allPointsUsed {
+  &--allPointsUsed {
     text-shadow: $ruddy-blue 1px 0 20px;
     color: $jordy-blue;
   }
-}
 
-.PointsText {
-  color: $lapis-lazuli;
-  font-size: $font-size-medium;
-  font-weight: 300;
+  &__text {
+    color: $lapis-lazuli;
+    font-size: $font-size-medium;
+    font-weight: 300;
+  }
 }

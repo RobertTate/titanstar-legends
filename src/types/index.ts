@@ -10,8 +10,6 @@ export type TalentPathName = {
 };
 
 export type RuneWithPath = Rune & TalentPathName;
-export type RuneName = Omit<Rune, "isSelected">;
-export type RuneNameWithPath = RuneName & TalentPathName;
 
 export type AppState = {
   totalPoints: number;

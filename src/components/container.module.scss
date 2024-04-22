@@ -3,27 +3,25 @@
 @import "../styles/fontsizes.scss";
 @import "../styles/palette.scss";
 
-.Container {
-  display: flex;
-}
-
-.TalentPathsContainer {
-  display: flex;
-
-  @include lap-wide-up {
-    flex-direction: column;
+.container {
+  &__talents {
+    display: flex;
+    
+    @include lap-wide-up {
+      flex-direction: column;
+    }
   }
-}
 
-.PointsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid $eerie-black;
-  background-color: black;
-  padding: $spacing-1;
-
-  @include lap-wide-up {
-    margin-right: $spacing-2;
+  &__points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $eerie-black;
+    background-color: black;
+    padding: $spacing-1;
+  
+    @include lap-wide-up {
+      margin-right: $spacing-2;
+    }
   }
 }
