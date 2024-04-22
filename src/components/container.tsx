@@ -7,9 +7,13 @@ type ContainerProps = {
 
 export default function Container(props: PropsWithChildren<ContainerProps>) {
   const styleConfig = {
-    "TalentPathsContainer": "container__talents",
-    "PointsContainer": "container__points"
-  }
+    TalentPathsContainer: "container__talents",
+    PointsContainer: "container__points",
+  };
 
-  return <div className={containerStyles[`${styleConfig[props.type]}`]}>{props.children}</div>;
+  return (
+    <div className={containerStyles[`${styleConfig[props.type]}`]}>
+      {props.children}
+    </div>
+  );
 }

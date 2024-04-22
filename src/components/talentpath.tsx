@@ -15,14 +15,18 @@ export default function TalentPath({ path }: TalentPathName) {
   return (
     <>
       <div className={talentPathStyles["talent-path"]}>
-        <p className={talentPathStyles["talent-path__title"]}>{talentPathTitle}</p>
+        <p className={talentPathStyles["talent-path__title"]}>
+          {talentPathTitle}
+        </p>
         {talentPath.map((rune) => {
-          return <Rune 
-            key={rune.name} 
-            name={rune.name} 
-            isSelected={rune.isSelected} 
-            path={path} 
-          />;
+          return (
+            <Rune
+              key={rune.name}
+              name={rune.name}
+              isSelected={rune.isSelected}
+              path={path}
+            />
+          );
         })}
       </div>
     </>

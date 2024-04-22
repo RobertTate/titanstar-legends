@@ -7,10 +7,14 @@ export default function Points() {
   const totalPoints = useSelector((state: AppState) => state.totalPoints);
   const allPointsUsed = pointsSpent === totalPoints && "--allPointsUsed";
   const pointStyleMods = `points${allPointsUsed}`;
-  
+
   return (
     <>
-      <p className={`${pointsStyles["points"]}${allPointsUsed ? ` ${pointsStyles[pointStyleMods]}` : ""}`}>
+      <p
+        className={`${pointsStyles["points"]}${
+          allPointsUsed ? ` ${pointsStyles[pointStyleMods]}` : ""
+        }`}
+      >
         {`${pointsSpent}`} / {`${totalPoints}`}
       </p>
       <p className={pointsStyles["points__text"]}>Points Spent</p>

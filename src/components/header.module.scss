@@ -19,11 +19,11 @@
       padding: 0 $spacing-half;
       font-size: $font-size-small;
     }
-  
+
     @include lap-up {
       font-size: $font-size-small;
     }
-  
+
     @include lap-wide-up {
       font-size: $font-size-medium;
     }

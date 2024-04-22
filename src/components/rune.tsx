@@ -57,7 +57,11 @@ const Rune = ({ name, isSelected, path }: RuneWithPath) => {
 
   return (
     <>
-      <div className={`${runeStyles["rune"]} ${runeStyles[runeStyleMods] ? ` ${runeStyles[runeStyleMods]}` : ""}`}>
+      <div
+        className={`${runeStyles["rune"]} ${
+          runeStyles[runeStyleMods] ? ` ${runeStyles[runeStyleMods]}` : ""
+        }`}
+      >
         <div
           role="button"
           aria-label={`${name} icon`}
@@ -67,11 +71,13 @@ const Rune = ({ name, isSelected, path }: RuneWithPath) => {
           className={`${runeStyles["rune__icon"]} ${runeStyles[runeIconStyleMods]}`}
           id={`${name}${runeState}`}
         ></div>
-        <span className={`${runeStyles["rune__bridge"]} ${runeStyles[runeBridgeStyleMods]}`}></span>
+        <span
+          className={`${runeStyles["rune__bridge"]} ${runeStyles[runeBridgeStyleMods]}`}
+        ></span>
       </div>
     </>
   );
-}
+};
 
 const MemoizedRune = memo(Rune);
 

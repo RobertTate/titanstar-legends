@@ -6,7 +6,7 @@
 .container {
   &__talents {
     display: flex;
-    
+
     @include lap-wide-up {
       flex-direction: column;
     }
@@ -19,7 +19,7 @@
     border: 1px solid $eerie-black;
     background-color: black;
     padding: $spacing-1;
-  
+
     @include lap-wide-up {
       margin-right: $spacing-2;
     }
